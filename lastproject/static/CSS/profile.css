@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+		
+	
+	}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(atlan.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-color:yellow;
+	
+}
+.head{
+	color:white;
+	position:absolute;
+	left:65%;
+	font-size:60px
+	
+}
+.renter{
+	 border: 1px solid white;
+	 padding: 10px 30px;
+	 color: #fff;
+	 text-decoration: none;
+	 margin:15px;
+	 font-size:20px;
+	 
+ }
+.renter:hover{
+	background-color:white;
+	color:black;
+}
+.name{
+	color:white;
+	position:absolute;
+	left:40%;
+	top:25%;
+	font-size:40px;	
+}
+
+.verify_email{
+	color:white;
+	position:absolute;
+	left:31%;
+	top:28%;
+	font-size:60px;
+	
+}
+
+.input{
+	background-color:white;
+	position:absolute;
+	top:45%;
+	left:40%;
+	width:30%;
+	height:5%;
+	border-radius:10%;
+}
+
+.enter{
+	background-color:#4CAF50;
+	color:white;
+	top:45%;
+	left:60%;
+	position:absolute;
+	width:10%;
+	height:5%;
+	position:absolute;
+	position:absolute;
+	border-radius:10%;
+}
+
+.mobile_number{
+	color:white;
+	position:absolute;
+	left:40%;
+	top:45%;
+	font-size:40px;	
+}
+
+.family_members{
+	color:white;
+	position:absolute;
+	left:40%;
+	top:30%;
+	font-size:40px;	
+}
+
+.Phone_number{
+	color:white;
+	position:absolute;
+	left:40%;
+	top:35%;
+	font-size:40px;	
+}
+
+.maritial_status{
+	color:white;
+	position:absolute;
+	left:40%;
+	top:40%;
+	font-size:40px;	
+}
+
+.email{
+	color:white;
+	position:absolute;
+	left:50%;
+	top:25%;
+	font-size:40px;	
+	
+}

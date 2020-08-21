@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+		
+	
+	}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(atlan.jpg);
+	height: 150vh;
+	background-size: cover;
+	background-position: center;
+	background-color:yellow;
+	
+}
+.head{
+	color:white;
+	position:absolute;
+	left:65%;
+	font-size:60px
+	
+}
+.input{
+	background-color:white;
+	position:absolute;
+	top:25%;
+	left:40%;
+	width:30%;
+	height:5%;
+	border-radius:10%;
+}
+
+.enter{
+	background-color:#4CAF50;
+	color:white;
+	top:25%;
+	left:60%;
+	position:absolute;
+	width:10%;
+	height:5%;
+	border-radius:10%;
+}
+
+.renter{
+	 border: 1px solid white;
+	 padding: 10px 30px;
+	 color: #fff;
+	 text-decoration: none;
+	 margin:15px;
+	 font-size:20px;
+	 
+ }
+.renter:hover{
+	background-color:white;
+	color:black;
+}
+
+.divtable{
+	width:40%;
+	height:50%;
+	position:absolute;
+	top:34%;
+	left:35%;
+}
+
+.table{
+	position:none;
+	padding-left:0%;
+	margin-left:20%;
+	color:white;
+	
+}

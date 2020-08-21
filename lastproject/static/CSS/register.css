@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+	}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(atlan.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+.register-input input{
+	top:40%;
+	left:50%;
+	margin:5px;
+	padding: 15px 70px;
+	margin-left:11%;
+	border-color:#4CAF50;
+	font-family:"Roboto", sans-serif;
+	outline:0;
+	box-sizing: border-box;
+	font-size:14px;
+	border-radius:5px;
+
+	
+}
+.register-input{
+	margin-left:5px;
+	margin-top:20px;
+	
+}	
+
+.register{
+	position:centre;
+	left:40%;
+	top:27%;
+	background-color:#f2f2f2;
+	width:30%;
+	height:60%;
+	position:absolute;
+	border-radius:15px;
+	
+}
+
+.register-btn{
+	color:white;
+	background-color:#4CAF50;
+}
+
+.login-link{
+	left:55%;
+	position:absolute;
+	
+}
+
+.head{
+	color:white;
+	position:absolute;
+	left:65%;
+	font-size:60px
+	
+}
+.home{
+	 border: 1px solid white;
+	 padding: 10px 30px;
+	 color: #fff;
+	 text-decoration: none;
+	 margin:15px;
+	 font-size:20px;
+	 
+ }
+.home:hover{
+	background-color:white;
+	color:black;
+}
