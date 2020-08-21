@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+	<title>Login page</title>
+			<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+<header>
+	<h1 class="head">RENTAL HOMES</h1>
+	<br>
+
+	<a class = "home" href="http://localhost:8000/">Home page</a>
+	
+	<br>
+	<div class="login">
+	<form class="login-input" method="post" action={{curl}}login/>
+	{% csrf_token %}
+	
+	<input type="text" name="email" placeholder="email"><br>
+	<input type="password" name="password" placeholder="password"><br>
+	<input class="login-btn" type="submit" name="s" value="login"/>
+	</form>
+		<h5 class="login-link"style="color:#4CAF50">Don't have an account! <a style="color:#4CAF50" href="http://localhost:8000/register">Register</a></h5>
+
+	</div>
+	</header>
+</body>
+</html>

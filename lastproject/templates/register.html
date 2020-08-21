@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+<head>
+	<title>Registration page</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+
+</head>
+<body>
+<header>
+	<h1 class="head">RENTAL HOMES</h1>
+	<br>
+	<a class = "home"href="http://localhost:8000/">Home page</a>
+	<div class="register">
+	<form class="register-input" method="post" action={{curl}}register/ >
+	{% csrf_token %}
+	
+	<input type="text" name="name" placeholder="name"><br>
+	<input type="email" name="email" placeholder="email"><br>
+	<input type="password" name="password1" placeholder="password"><br>
+	<input type="password" name="password2" placeholder="password"><br>
+	<input class="register-btn" type="submit" name="s" value="Register"/>
+	</form>
+	<h5 class="login-link"style="color:#4CAF50">Already a member! <a style=" color:#4CAF50" href = "http://localhost:8000/login"> Login</a></h5>
+	</div>
+</header>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

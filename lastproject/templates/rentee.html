@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+<head>
+<title>Rentee</title>
+</head>
+<body>
+	<a href="http://localhost:8000/">Home page</a>
+	<a href="http://localhost:8000/profile">Profile Page</a>
+	<p></p>
+	<p></p>
+	<form method="post" action={{curl}}rentee/ >
+	{% csrf_token %}
+	<input type="text" name="name" placeholder="name"><br>
+	<input type="text" name="email" placeholder="email"><br>
+	<input type="text" name="phone_number" placeholder="phone_number"><br>
+	<input type="text" name="mobile_number" placeholder="mobile_number"><br>
+	<input type="text" name="occupation" placeholder="occupation"><br>
+	<input type="text" name="maritial_status" placeholder="maritial_status"><br>
+    <input type="text" name="family_member" placeholder="family_member"><br>
+
+	
+	<input type="submit" name="s" value="Submit"/>
+</form>
+</body>
+</html>

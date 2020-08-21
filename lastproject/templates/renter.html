@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+<title>Renter</title>
+</head>
+<body>
+	<a href="http://localhost:8000/">Home page</a>
+	<a href="http://localhost:8000/profile">Profile Page</a>
+	<p></p>
+	<p></p>
+	<form method="post" action={{curl}}renter/ >
+	{% csrf_token %}
+	
+	<input type="text" name="name" placeholder="name"><br>
+	<input type="email" name="email" placeholder="email"><br>
+	<input type="text" name="phone_number" placeholder="phone_number"><br>
+	<input type="text" name="mobile_number" placeholder="mobile_number"><br>
+	<input type="text" name="state" placeholder="state"><br>
+	<input type="text" name="city" placeholder="city"><br>
+	<input type="text" name="locality" placeholder="locality"><br>
+	<input type="text" name="house_number" placeholder="house_number"><br>
+	<input type="text" name="landmark" placeholder="landmark"><br>
+	<input type="text" name="no_of_rooms" placeholder="no_of_rooms"><br>
+	<input type="text" name="kitchen" placeholder="kitchen"><br>
+	<input type="text" name="bathroom" placeholder="bathroom"><br>
+	<!--<input type="file" name="pic1" placeholder="pic1"><tr></tr><input type="submit" name="s" value="Add Picture"<br>
+	<input type="file" name="pic2" placeholder="pic2"><tr></tr><input type="submit" name="s" value="Add Picture"/><br>
+	<input type="file" name="pic3" placeholder="pic3"><tr></tr><input type="submit" name="s" value="Add Picture"/><br>-->
+	<input type="text" name="location" placeholder="location"><br>
+	<input type="text" name="message" placeholder="message"><br>
+	<input type="text" name="rent_value" placeholder="rent_value"><br>
+	<input type="text" name="electricity_charge" placeholder="electricity_charge"><br>
+	<input type="text" name="water_charge" placeholder="water_charge"><br>
+
+	
+	
+	<input type="submit" name="s" value="Submit"/>
+</form>
+</body>
+</html>

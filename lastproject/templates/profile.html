@@ -1,0 +1,92 @@
+{% load static %}
+
+
+<html>
+<head>
+<title> Profile</title>
+			<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+
+</head>
+<body>
+<header>
+<h1 class="head">RENTAL HOMES</h1>
+
+	<br>
+	<a class="renter" href="http://localhost:8000/">Home</a>
+	<a class="renter" href="http://localhost:8000/rentee">Edit Profile</a>
+	<a class="renter" href="http://localhost:8000/search">Search</a>
+	<a class="renter" href="http://localhost:8000/logout">Logout</a>
+	<br><br><br>
+<!--	<form enctype="multipart/form-data" method="post" action=http://localhost:8000/majorproject/profile/ >
+{% csrf_token %}
+<input class="input" type="text" name="email" placeholder="email">
+<button type="submit">enter </button>
+</form>-->
+	
+<!--
+{% for row in movies %}
+<img src={{media_url}}{{row.pic1}} height="100" width="150"/>
+	<br>
+{% endfor %}
+{% for row in movies %}
+<img src={{media_url}}{{row.pic2}} height="100" width="150"/>
+	<br>
+{% endfor %}
+{% for row in movies %}
+<img src={{media_url}}{{row.pic3}} height="100" width="150"/>
+	<br>
+{% endfor %}
+
+<!--{% for k in details %}
+<td>Email ID</td>
+		<td>{{ k.email }}</td>
+{% endfor %}-->
+<!--{% for l in details%}
+<h1>{{l.name}}</h1>
+{% endfor%}-->
+
+{% if messages %}
+		<ul>
+			{% for k in messages %}
+			<li>{{ k }}</li>	
+			{% endfor %}
+		</ul>
+		{% endif %}
+<!---
+{% if email %}
+	{% for k in email %}
+		<h3 class="name">{{ k.name }}</h3>
+		<h3 style="color:#fff">{{k.email}}</h3>
+		<h3 style="color:#fff">{{k.password}}</h3>
+		<h3 style="color:#fff">{{k.mobile_number}}</h3>
+		<h3 style="color:#fff">{{k.occupation}}</h3>
+	{% endfor %}
+{% endif %}-->
+<!--
+{% if email %}
+	{% for k in email %}
+		<h3 class="name">{{ k.name }}</h3>
+		<h3 style="color:#fff ;position:absolute; left:77%; top:50%; font-size:25px	">E-mail ID<hr>{{udata}}</h3>
+		
+	{% endfor %}
+{% endif %}
+-->
+{% for k in email %}
+<h3 class="name">{{ k.name }}</h3>
+		<h3 style="color:#fff ;position:absolute; left:77%; top:50%; font-size:25px	">E-mail ID<hr>{{udata}}</h3>
+{% endfor %}		
+
+{% if fmail %}
+	{% for j in fmail %}
+		<h3 style="color:#fff ;position:absolute; left:0%; top:70%; font-size:25px	">Maritial Status<hr>{{j.maritial_status}}</h3>
+		<h3 style="color:#fff ;position:absolute; left:0%; top:29%; font-size:25px	"class="mobile_number">Mobile Number <hr>{{j.mobile_number}}</h3>
+		<h3 style="color:#fff ;position:absolute; left:77%; top:29%; font-size:25px	"class="phone_number">Phone Number<hr>{{j.phone_number}}</h3>
+		<h3 style="color:#fff ;position:absolute; left:77%; top:70%; font-size:25px	"class="family_members">Family Members<hr>{{j.family_member}}</h3>
+		<h3 style="color:#fff ;position:absolute; left:0%; top:50%; font-size:25px	">Occupation<hr>{{j.occupation}}</h3>
+	{% endfor %}
+{% endif %}
+
+</header>
+</body>
+</html>
+

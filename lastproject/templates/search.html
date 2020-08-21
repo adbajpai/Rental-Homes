@@ -1,0 +1,62 @@
+{% load static %}
+<html>
+<head>
+<title>Search</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+</head>
+<body>
+<header>
+<h1 class="head">RENTAL HOMES</h1><br>
+<a class="renter" href="http://localhost:8000/">Home</a>
+<a class="renter" href="http://localhost:8000/profile">Profile</a>
+<form enctype="multipart/form-data" method="post" action=http://localhost:8000/lastproject/search/ >
+{% csrf_token %}
+<input class="input" type="text" name="search" placeholder="city">
+<button class="enter" type="submit">Search</button>
+</form><br><br>
+<br>
+	{% if messages %}
+		<ul>
+			{% for k in messages %}
+			<h1>{{ k }}<h1>
+			{% endfor %}
+		</ul>
+	{% endif %}
+			
+<div class="divtable">		
+{% if sr %}
+	{% for k in sr %}
+	<table class="table" border="5px" width="60%">
+	<tr>
+		<td>Name</td>
+		<td>{{ k.name }}</td>
+	</tr>
+	<tr>
+		<td>Email ID</td>
+		<td>{{ k.email }}</td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>{{ k.city }} , {{ k.locality }}</td>
+	</tr>
+	<tr>
+		<td>Rent Value</td>
+		<td>{{ k.rent_value }}</td>
+	</tr>
+	<tr>
+		<td>
+		<!--<td><button action=http://localhost:8000/majorproject/profile/>Visit</button></td>
+			<a href="http://localhost:8000/renter">Renter</a>
+		<td><button href="http://localhost:8000/majorproject/profile/">Visit</button></td>-->
+		<a href="http://localhost:8000/rentersearch/" class="btn">Visit</a>
+</td><td></td>
+
+	</tr><br>
+	</table>
+
+	{% endfor %}
+{% endif %}
+</div>
+</header>	
+</body>
+</html>

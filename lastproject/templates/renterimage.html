@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+<title>renterimage</title>
+</head>
+<body>
+<form enctype="multipart/form-data" method="post" action=http://localhost:8000/majorproject/renterimage/ >
+{% csrf_token %}
+<input type="file" name="pic1" placeholder="pic1"><tr></tr><!--<input type="submit" name="s" value="Add Picture"/>--><br>
+	<input type="file" name="pic2" placeholder="pic2"><tr></tr><!--<input type="submit" name="s" value="Add Picture"/>--><br>
+	<input type="file" name="pic3" placeholder="pic3"><tr></tr><!--<input type="submit" name="s" value="Add Picture"/>--><br>
+	<br>
+	<br>
+	<input type="submit" name="s" value="Submit"/>
+	</form>
+</body>
+</html>
