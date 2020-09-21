@@ -46,11 +46,7 @@ def login(request):
     else:
         email=request.POST.get('email')	
         password=request.POST.get('password')
-        #####################################
-        #response=render(request,"login.html",{'curl':curl})
-        #response.set_cookie('email','renter')
         ####################################		
-        #query="select * from majorprojectapp_destination where email='%s' and password='%s' " %(email,password)
         query="select * from lastapp_destination where email='%s' and password='%s' " %(email,password)
         models.cursor.execute(query)
         userDetails=models.cursor.fetchall()
@@ -67,108 +63,7 @@ def login(request):
             return render(request,'register.html',{'curl':curl,'output':'Login failed invalid user or verify your account'})				
         else:
             return redirect('login')
-############################################
-
-"""
-def verify_email(request):
-    movies=z.renterimage.objects.filter()
-    #info=z.renter.objects.filter()
-    #details=z.renter.objects.filter(email=email)
-    #details=z.renter.objects.filter()
-
-    #val1=request.GET['num1'])
-    #email=request.POST('email')
-    #query="select * from renter_renter where email='%s'" %(email)
-    #details=z.renter.objects.filter()
-
-    #query="select * from renter_renter where email='%s'" %(email)
-    #models.cursor.execute(query)
-    #details=models.cursor.fetchone()
-
-    #email=request.POST.get('email')
-    #query="select * from renter_renterimage where email='%s'" %(email)
-    #models.cursor.execute(query)
-    #details=models.cursor.fetchall()
-
-    #movies=z.renterimage.objects.filter()
-    #info=z.renter.objects.filter()
-    #############################
-    #email=request.COOKIES.get('email')
-    #############################
-    if request.method=='POST':
-        email = request.POST['email']
-
-        if email:
-            match = z.renter.objects.filter(Q(email=email))
-
-            if match:
-                return render(request,'profile.html',{'email':match})
-            else:
-                messages.error(request,'no result found')
-        else:
-            return HttpResponseRedirect('/profile/')
-            
-    return render(request, "verify_email.html", {'curl':curl,'movies':movies,'media_url':media_url})
-
-"""
-"""
-def profile(request):
-    #movies=z.renterimage.objects.filter()
-
-    
-    #info=z.renter.objects.filter()
-    #details=z.renter.objects.filter(email=email)
-    #details=z.renter.objects.filter()
-
-    #val1=request.GET['num1'])
-    #email=request.POST('email')
-    #query="select * from renter_renter where email='%s'" %(email)
-    #details=z.renter.objects.filter()
-
-    #query="select * from renter_renter where email='%s'" %(email)
-    #models.cursor.execute(query)
-    #details=models.cursor.fetchone()
-
-    #email=request.POST.get('email')
-    #query="select * from renter_renterimage where email='%s'" %(email)
-    #models.cursor.execute(query)
-    #details=models.cursor.fetchall()
-
-    #movies=z.renterimage.objects.filter()
-    #info=z.renter.objects.filter()
-    #############################
-    #email=request.COOKIES.get('email')
-    #############################
-    ##if request.method=='POST':
-      ##  email = request.POST['email']
-
-        ##if email:
-            #match = z.majorprojectapp_destination.objects.filter(Q(email=email))
-            #match = z.lastapp_destination.objects.filter(Q(email=email))
-            #match = z.Destination.objects.filter(Q(email=email))
-            #match = z.rentee.objects.filter(Q(email=email))
-            #match = z.Destination.objects.filter(Q(email=email))
-            ##match = z.Destination.objects.filter(Q(email=email))
-            ##catch = z.rentee.objects.filter(Q(email=email))
-            match = z.Destination.objects.filter(Q(email=request.session["uid"]))
-            catch = z.rentee.objects.filter(Q(email=request.session["uid"]))
-            #match = z.Destination.objects.filter(Q(email=email),name = request.session["uid"])
-            
-            if match:
-                #return render(request,'profile.html',{'email':match})
-                
-                return render(request,'profile.html',{'email':match,'fmail':catch,'udata':request.session["uid"]})
-                #return render(request,'profile.html',{'udata':request.session["uid"]})
-            else:
-                messages.error(request,'no result found')
-        else:
-            return HttpResponseRedirect('/profile/')
-            
-    #return render(request, "verify_email.html", {'curl':curl,'movies':movies,'media_url':media_url})
-    ##return render(request, "verify_email.html", {'curl':curl,'media_url':media_url})
-    return render(request, "profile.html", {'curl':curl,'udata':request.session["uid"]})    
-##########################################################################################################################33
-"""
+###########################################
 def profile(request):    
     match = z.Destination.objects.filter(Q(email=request.session["uid"]))
     catch = z.rentee.objects.filter(Q(email=request.session["uid"]))
@@ -177,43 +72,10 @@ def profile(request):
 ##########################################################################################################################33
 
 def rentersearch(request):
-    #movies=z.renterimage.objects.filter()
-
-    
-    #info=z.renter.objects.filter()
-    #details=z.renter.objects.filter(email=email)
-    #details=z.renter.objects.filter()
-
-    #val1=request.GET['num1'])
-    #email=request.POST('email')
-    #query="select * from renter_renter where email='%s'" %(email)
-    #details=z.renter.objects.filter()
-
-    #query="select * from renter_renter where email='%s'" %(email)
-    #models.cursor.execute(query)
-    #details=models.cursor.fetchone()
-
-    #email=request.POST.get('email')
-    #query="select * from renter_renterimage where email='%s'" %(email)
-    #models.cursor.execute(query)
-    #details=models.cursor.fetchall()
-
-    #movies=z.renterimage.objects.filter()
-    #info=z.renter.objects.filter()
-    #############################
-    #email=request.COOKIES.get('email')
-    #############################
     if request.method=='POST':
         email = request.POST['email']
 
         if email:
-            #match = z.majorprojectapp_destination.objects.filter(Q(email=email))
-            #match = z.lastapp_destination.objects.filter(Q(email=email))
-            #match = z.Destination.objects.filter(Q(email=email))
-            #match = z.rentee.objects.filter(Q(email=email))
-            #match = z.Destination.objects.filter(Q(email=email))
-            #match = z.Destination.objects.filter(Q(email=email))
-            #catch = z.rentee.objects.filter(Q(email=email))
             fatch = z.renter.objects.filter(Q(email=email))
             
             if fatch:
@@ -224,7 +86,7 @@ def rentersearch(request):
         else:
             return HttpResponseRedirect('/rentersearch/')
             
-    #return render(request, "verify_email.html", {'curl':curl,'movies':movies,'media_url':media_url})
+    
     return render(request, "verify_renter.html", {'curl':curl,'media_url':media_url})
 
 
@@ -246,8 +108,6 @@ def search(request):
             return HttpResponseRedirect('/search/')
         
     return render(request,"search.html", {})
-
-#    movies=z.renterimage.objects.filter()
 
 def rentee(request):
     if request.method=='GET':
@@ -296,18 +156,6 @@ def renter(request):
         rent_value=request.POST.get('rent_value')
         electricity_charge=request.POST.get('electricity_charge')
         water_charge=request.POST.get('water_charge')
-        #p=models.renter(name=name,email=email,phone_number=phone_number,mobile_number=mobile_number,state=state,city=city,locality=locality,house_number=house_number,landmark=landmark,
-        #               no_of_rooms=no_of_rooms,kitchen=kitchen,bathroom=bathroom,location=location,message=message,rent_value=rent_value,electricity_charge=electricity_charge,water_charge=water_charge)
-        #pica=request.FILES['pica']
-        #picb=request.FILES['picb']
-        #picc=request.FILES['picc']
-        #fs = FileSystemStorage()
-        #filenamea = fs.save(pica.name,pica)
-        #filenameb = fs.save(picb.name,picb)
-        #filenamec = fs.save(picc.name,picc)
-        #p=models.addcat(pic1=filename1)
-        #p=models.addcat(pic2=filename2)
-        #p=models.addcat(pic3=filename3)
         p=models.renter(name=name,email=email,phone_number=phone_number,mobile_number=mobile_number,state=state,city=city,locality=locality,house_number=house_number,landmark=landmark,
                         no_of_rooms=no_of_rooms,kitchen=kitchen,bathroom=bathroom,location=location,message=message,rent_value=rent_value,electricity_charge=electricity_charge,water_charge=water_charge)
 
@@ -316,7 +164,6 @@ def renter(request):
         return redirect(myurl)
    
 def logout(request):
-#    del request.session['uid']
     return redirect('/login')
 
 
